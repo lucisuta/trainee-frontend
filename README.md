@@ -59,3 +59,15 @@ To build and run the unit tests
 ```sh
 swift test
 ```
+
+### CodeBuild
+
+The `buildspec.yml` configuration file is used to tell
+CodeBuild how to build this project and what the artifacts are.
+
+### CodeDeploy
+
+The `appspec.yml` configuration file is used to tell
+CodeDeploy how to deploy artifacts and run the application in production.
+The configuration also makes use of the scripts found in the `Scripts` folder
+to manage the lifecycle of the application.

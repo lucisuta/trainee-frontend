@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/trainee
+hooks:
+  BeforeInstall:
+    - location: Scripts/CodeDeploy/BeforeInstall.sh
+  ApplicationStart:
+    - location: Scripts/CodeDeploy/ApplicationStart.sh
+  ApplicationStop:
+    - location: Scripts/CodeDeploy/ApplicationStop.sh

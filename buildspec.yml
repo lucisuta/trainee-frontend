@@ -1,0 +1,28 @@
+version: 0.2
+phases:
+  install:
+    on-failure: ABORT
+    commands:
+      - export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
+      - apt-get -q update
+      - apt-get -q dist-upgrade -y
+      - rm -rf /var/lib/apt/lists/*
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - swift package resolve --skip-update
+  build:
+    on-failure: ABORT
+    commands:
+      - swift build -c release --static-swift-stdlib -Xlinker -u -Xlinker _swift_backtrace_isThunkFunction
+  post_build:
+    commands:
+      - mv $(swift build --package-path .build -c release --show-bin-path)/App ./
+artifacts:
+  files:
+    - App
+    - Resources/**/*
+    - Public/**/*
+    - Scripts/**/*
+    - appspec.yml
+  discard-paths: no
