@@ -1,0 +1,6 @@
+# some fake secrets to test security
+redis:
+  username: "username"
+  password: "jdskfjejjjsdfkjnjks"
+mysql:
+  url: "mysql://john_doe:P@ssw0rd123!@db.example.com:3306/my_database"
