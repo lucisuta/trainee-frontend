@@ -4,7 +4,7 @@ import Vapor
 // configures your application
 public func configure(_ app: Application) async throws {
 	// testing security features
-	let password = "sdfajdfkajsnfkjadnkajdf"
+	let password = "UUiasd23$ad##"
 	print(password)
 
 	// testing security features
