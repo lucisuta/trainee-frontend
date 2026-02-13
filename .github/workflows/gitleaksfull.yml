@@ -1,4 +1,4 @@
-name: Git Leaks
+name: Git Leaks Full Scan
 on:
   workflow_dispatch:
   schedule:
