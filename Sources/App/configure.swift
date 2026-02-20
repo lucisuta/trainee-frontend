@@ -16,8 +16,12 @@ public func configure(_ app: Application) async throws {
 	print(key)
 
 	// testing security features
-	let aws_access_key_id = "AKIA4OYOTA3ZB9Y2KIMB"
-	let aws_secret_access_key = "XKd13M/SdzgR2fRRnc3E7E/tOKZtC1embpmJ1lJh"
+	let secondKey = "c3VwZXIgc2VjcmV0IGtleSAy"
+	print(secondKey)
+
+	// testing security features
+	let awsAccessKeyId = "AKIA4OYOTA3ZB9Y2KIMB"
+	let awsSecretAccessKey = "XKd13M/SdzgR2fRRnc3E7E/tOKZtC1embpmJ1lJh"
 	print("AWS Credentials: \(aws_access_key_id):\(aws_secret_access_key)")
 
 	// serve files from /Public folder
