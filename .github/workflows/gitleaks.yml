@@ -2,6 +2,7 @@ name: Git Leaks
 on:
   pull_request:
   push:
+  workflow_dispatch:
 permissions:
   security-events: none
 jobs:
